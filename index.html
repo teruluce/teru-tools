@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; style-src 'self' 'unsafe-inline'; connect-src 'none'; img-src 'self' blob:; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  
+  
+  
+  
+
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffefa;
+      --ink: #333b33;
+      --muted: #73796f;
+      --green: #879982;
+      --green-dark: #526b54;
+      --line: #e5e4da;
+      --soft: #e8ede3;
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 36px 18px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, #e4e9dc 0, #e4e9dc 95px, transparent 96px),
+        radial-gradient(circle at 94% 80%, #eee8dc 0, #eee8dc 125px, transparent 126px),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+        "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 30px 38px;
+      border: 1px solid rgba(120, 135, 112, .15);
+      border-radius: 28px;
+      background: rgba(255, 254, 250, .78);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--green-dark);
+      font-size: 12px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 7vw, 48px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+      line-height: 1.15;
+    }
+
+    .intro {
+      position: relative;
+      z-index: 1;
+      max-width: 420px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .decoration {
+      position: absolute;
+      top: -35px;
+      right: -25px;
+      width: 180px;
+      height: 180px;
+      border: 1px solid rgba(135, 153, 130, .45);
+      border-radius: 50%;
+    }
+
+    .decoration::before,
+    .decoration::after {
+      position: absolute;
+      content: "";
+      border: 1px solid rgba(135, 153, 130, .35);
+      border-radius: 50%;
+    }
+
+    .decoration::before {
+      inset: 22px;
+    }
+
+    .decoration::after {
+      inset: 44px;
+      background: rgba(232, 237, 227, .5);
+    }
+
+    main {
+      margin-top: 20px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 12px 35px rgba(56, 62, 48, .04);
+    }
+
+    .section-title {
+      margin: 0 0 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .section-description {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tools {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .tools li {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tool {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 84px;
+      padding: 14px 8px;
+      border-radius: 12px;
+      transition: background-color .2s ease;
+    }
+
+    .tool:hover {
+      background: var(--soft);
+    }
+
+    .tool:focus-visible {
+      outline: 3px solid rgba(82, 107, 84, .3);
+      outline-offset: 2px;
+    }
+
+    .badge {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(135, 153, 130, .5);
+      border-radius: 50%;
+      background: var(--soft);
+      color: var(--green-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+    }
+
+    .body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .name {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .note {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .arrow {
+      flex: none;
+      color: var(--green-dark);
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 25px 8px 0;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 22px 13px;
+      }
+
+      header {
+        padding: 28px 22px 30px;
+      }
+
+      main {
+        padding: 22px 18px;
+      }
+
+      .decoration {
+        top: -50px;
+        right: -70px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tool { transition: none; }
+    }
+  </style>
+<title>便利なWebツール集｜Tools Personal</title>
+<meta name="description" content="URLクリーナー・割り勘・学習タイマー・QRコードなど、ブラウザで使える小さなWebツール集。">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#f7f5ef">
+<link rel="canonical" href="https://teruluce.github.io/teru-tools/">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tools Personal / teru_luce">
+<meta property="og:title" content="便利なWebツール集｜Tools Personal">
+<meta property="og:description" content="URLクリーナー・割り勘・学習タイマー・QRコードなど、ブラウザで使える小さなWebツール集。">
+<meta property="og:url" content="https://teruluce.github.io/teru-tools/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="便利なWebツール集｜Tools Personal">
+<meta name="twitter:description" content="URLクリーナー・割り勘・学習タイマー・QRコードなど、ブラウザで使える小さなWebツール集。">
+<link rel="stylesheet" href="./site.css">
+</head>
+
+<body>
+  <div class="page">
+    <div class="topline">
+      <span><span class="dot"></span>Personal tools</span>
+      <span>Simple &amp; private</span>
+    </div>
+
+    <header>
+      <div class="decoration" aria-hidden="true"></div>
+      <p class="eyebrow">A little collection</p>
+      <h1>Tools<br>Personal.</h1>
+      <p class="intro">
+        日々の作業に使える小さなWebツールをまとめました。使いたいものを選んでください。
+      </p>
+    </header>
+
+    <main>
+      <h2 class="section-title">Choose a tool</h2>
+      <p class="section-description">
+        基本の処理はブラウザ内で行います。保存・共有の扱いは各ツールの説明をご確認ください。
+      </p>
+
+      <ul class="tools"><li><a class="tool" href="./url-cleaner/"><span class="badge" aria-hidden="true">U</span><span class="body"><span class="name">URLクリーナー</span><span class="note">追跡パラメータを削除してリンクをコピー・共有</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./duckmail/"><span class="badge" aria-hidden="true">D</span><span class="body"><span class="name">Duckアドレス生成</span><span class="note">自分のDuckアドレスから送るための宛先を作成</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./roulette/"><span class="badge" aria-hidden="true">R</span><span class="body"><span class="name">ルーレット・グループ分け</span><span class="note">候補からランダムに選ぶ・グループに分ける</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./split/"><span class="badge" aria-hidden="true">S</span><span class="body"><span class="name">割り勘計算</span><span class="note">合計金額と人数から、端数の扱いを選んで計算</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./timer/"><span class="badge" aria-hidden="true">T</span><span class="body"><span class="name">学習タイマー</span><span class="note">勉強と休憩を繰り返すポモドーロタイマー</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./qr/"><span class="badge" aria-hidden="true">Q</span><span class="body"><span class="name">QRコード作成</span><span class="note">URLや文字からQRコードを作成・画像で保存</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./constellation/"><span class="badge" aria-hidden="true">C</span><span class="body"><span class="name">ことば星座</span><span class="note">好きな言葉から架空の星座を作成・共有</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+<li><a class="tool" href="./rally/"><span class="badge" aria-hidden="true">B</span><span class="body"><span class="name">ラリー</span><span class="note">羽根を落とさず続けるバドミントンゲーム</span></span><span class="arrow" aria-hidden="true">→</span></a></li>
+</ul>
+    </main>
+
+    <aside class="notice"><h2>ご利用にあたって</h2><p>個人制作のツール集です。重要な用途では結果をご確認ください。機密情報は入力しないでください。各サービスの公式サイトではありません。</p></aside><footer>Tools Personal · 個人制作のWebツール集<div>開発者：<a href="https://github.com/teruluce">teruluce</a> · <a href="https://github.com/teruluce/teru-tools/tree/main/">ソースコード</a> · <a href="./">ツールホーム</a></div></footer>
+  </div>
+</body>
+</html>
