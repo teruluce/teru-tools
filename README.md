@@ -4,7 +4,7 @@
 
 - 公開トップ: https://teruluce.github.io/teru-tools/
 - トップのファイル: index.html
-- 各機能: duckmail/、roulette/、split/、timer/、qr/、url-cleaner/、constellation/、rally/
+- 各機能: duckmail/、roulette/、split/、timer/、qr/、url-cleaner/
 - 共通デザイン: site.css
 - 公開用SEO: 各HTML、sitemap.xml、robots.txt
 
@@ -26,3 +26,5 @@
 個人側をモデルにしていますが、自動同期はありません。公開URLと説明・SEOを確認して更新してください。
 
 URLクリーナーの検証: `node url-cleaner/cleaner.test.mjs`。全体の移転記録はdocs/SITE_STRUCTURE.mdを参照してください。
+
+公開版はブルー・ホワイト・ネイビー、個人版は生成り・グリーンです。ことば星座とラリーはユーザー指定で削除しました。
