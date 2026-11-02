@@ -394,20 +394,20 @@
     .settings-row { display: flex; gap: 12px; }
     .settings-row .field { flex: 1; min-width: 0; }
   </style>
-<title>学習タイマー｜Tools Personal</title>
+<title>学習タイマー｜Teru Tools</title>
 <meta name="description" content="勉強と休憩を繰り返すポモドーロタイマー。ブラウザで使える無料のWebツールです。">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#f3f7fb">
 <link rel="canonical" href="https://teruluce.github.io/teru-tools/timer/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Tools Personal / teru_luce">
-<meta property="og:title" content="学習タイマー｜Tools Personal">
+<meta property="og:site_name" content="Teru Tools">
+<meta property="og:title" content="学習タイマー｜Teru Tools">
 <meta property="og:description" content="勉強と休憩を繰り返すポモドーロタイマー。ブラウザで使える無料のWebツールです。">
 <meta property="og:url" content="https://teruluce.github.io/teru-tools/timer/">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学習タイマー｜Tools Personal">
+<meta name="twitter:title" content="学習タイマー｜Teru Tools">
 <meta name="twitter:description" content="勉強と休憩を繰り返すポモドーロタイマー。ブラウザで使える無料のWebツールです。">
 <link rel="stylesheet" href="../site.css">
 </head>
@@ -421,7 +421,7 @@
 
     
 
-    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/">Duckアドレス生成</a><a href="../roulette/">ルーレット・グループ分け</a><a href="../split/">割り勘計算</a><a href="../timer/" aria-current="page">学習タイマー</a><a href="../qr/">QRコード作成</a></nav><header>
+    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/">送信用DUCKアドレス生成</a><a href="../roulette/">ルーレット・組み分け</a><a href="../split/">割り勘計算</a><a href="../timer/" aria-current="page">学習タイマー</a><a href="../qr/">QRコード作成</a></nav><header>
       <div class="decoration" aria-hidden="true"></div>
       <p class="eyebrow">A little utility</p>
       <h1>学習タイマー</h1>
@@ -499,7 +499,7 @@
       </div>
     </aside>
 
-    <section class="guide"><h2>使い方</h2><p>「開始」で勉強を始め、「一時停止」「リセット」「スキップ」で操作します。「設定」から勉強・休憩・長休憩の長さや通知音を変更できます。記録はページを開いている間だけ表示されます。</p></section><aside class="notice"><h2>ご利用にあたって</h2><p>本ツールは個人制作です。結果の正確性・完全性や継続的な動作を保証しません。重要な用途では結果をご確認ください。 iPhoneなどで画面をロックしたり別アプリへ移動すると、通知音や画面更新が遅れる場合があります。</p></aside><footer>Tools Personal · 個人制作のWebツール集<div>開発者：<a href="https://github.com/teruluce">teruluce</a> · <a href="https://github.com/teruluce/teru-tools/tree/main/timer">ソースコード</a> · <a href="../">ツールホーム</a></div></footer>
+    <section class="guide"><h2>使い方</h2><p>「開始」で勉強を始め、「一時停止」「リセット」「スキップ」で操作します。「設定」から勉強・休憩・長休憩の長さや通知音を変更できます。記録はページを開いている間だけ表示されます。</p></section><aside class="notice"><h2>ご利用にあたって</h2><p>本ツールは個人制作です。結果の正確性・完全性や継続的な動作を保証しません。重要な用途では結果をご確認ください。 iPhoneなどで画面をロックしたり別アプリへ移動すると、通知音や画面更新が遅れる場合があります。</p></aside><footer>Teru Tools · 個人制作のWebツール集<div>開発者：<a href="https://github.com/teruluce">teruluce</a> · <a href="https://github.com/teruluce/teru-tools/tree/main/timer">ソースコード</a> · <a href="../">ツールホーム</a></div></footer>
   </div>
 
   <script>
@@ -572,7 +572,7 @@
       startButton.textContent = running ? "一時停止" : (started ? "再開" : "開始");
       statSets.textContent = String(sets);
       statMin.textContent = Math.floor(studyMs / 60000) + "分";
-      document.title = running ? text + " " + LABELS[phase] + " · Timer Personal" : "Timer Personal";
+      document.title = running ? text + " " + LABELS[phase] + " · 学習タイマー｜Teru Tools" : "学習タイマー｜Teru Tools";
     }
 
     function enterPhase(p) {
