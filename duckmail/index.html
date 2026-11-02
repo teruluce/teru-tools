@@ -37,16 +37,16 @@
   <style>
     :root {
       color-scheme: light;
-      --bg: #f7f5ef;
+      --bg: #f3f7fb;
       --surface: #fff;
-      --ink: #333b33;
-      --muted: #626c5e;
-      --accent: #526b54;
-      --accent-hover: #405642;
-      --line: #deded2;
-      --soft: #e8ede3;
+      --ink: #253c50;
+      --muted: #536b7e;
+      --accent: #286799;
+      --accent-hover: #20547e;
+      --line: #d8e4ee;
+      --soft: #e8f2fa;
       --error: #a12e2e;
-      --focus: #879982;
+      --focus: #85b7d8;
       --radius: 18px;
     }
     * { box-sizing: border-box; }
@@ -107,7 +107,7 @@
       width: 100%;
       min-height: 50px;
       padding: 12px 14px;
-      border: 1px solid #deded2;
+      border: 1px solid #d8e4ee;
       border-radius: 11px;
       color: var(--ink);
       background: #fff;
@@ -145,7 +145,7 @@
     .result {
       margin-top: 24px;
       padding: 18px;
-      border: 1px solid #deded2;
+      border: 1px solid #d8e4ee;
       border-radius: 14px;
       background: var(--soft);
     }
@@ -163,7 +163,7 @@
     .result .primary { flex-basis: 100%; }
     .status { min-height: 1.6em; margin: 12px 0 0; color: var(--muted); font-size: .88rem; }
     .status.error { color: var(--error); }
-    .privacy { display: flex; gap: 12px; margin-top: 14px; padding: 16px; background: #e8ede3; }
+    .privacy { display: flex; gap: 12px; margin-top: 14px; padding: 16px; background: #e8f2fa; }
     .privacy-mark { flex: 0 0 auto; color: var(--accent); font-weight: 800; }
     .privacy strong { display: block; margin-bottom: 3px; }
     .privacy p { margin: 0; color: #526879; font-size: .85rem; }
@@ -189,24 +189,24 @@
     /* Tools Personal 共通デザイン */
     :root {
       color-scheme: light;
-      --bg: #f7f5ef;
-      --paper: #fffefa;
-      --surface: #fffefa;
-      --ink: #333b33;
-      --muted: #626c5e;
-      --accent: #526b54;
-      --accent-hover: #405642;
-      --green: #879982;
-      --green-dark: #526b54;
-      --line: #deded2;
-      --soft: #e8ede3;
-      --focus: #879982;
+      --bg: #f3f7fb;
+      --paper: #ffffff;
+      --surface: #ffffff;
+      --ink: #253c50;
+      --muted: #536b7e;
+      --accent: #286799;
+      --accent-hover: #20547e;
+      --green: #85b7d8;
+      --green-dark: #286799;
+      --line: #d8e4ee;
+      --soft: #e8f2fa;
+      --focus: #85b7d8;
       --radius: 22px;
     }
     body {
       background:
-        radial-gradient(circle at 8% 8%, #e4e9dc 0, #e4e9dc 95px, transparent 96px),
-        radial-gradient(circle at 94% 80%, #eee8dc 0, #eee8dc 125px, transparent 126px),
+        radial-gradient(circle at 8% 8%, #deedf7 0, #deedf7 95px, transparent 96px),
+        radial-gradient(circle at 94% 80%, #e6eef8 0, #e6eef8 125px, transparent 126px),
         var(--bg);
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
@@ -259,7 +259,7 @@
       padding: 18px 20px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background: #e8ede3;
+      background: #e8f2fa;
       color: var(--muted);
     }
     .notice h2, .privacy strong { color: var(--ink); }
@@ -285,7 +285,7 @@
     .primary:hover:not(:disabled), .button-link.primary:hover { background: var(--accent-hover); }
     .secondary:hover:not(:disabled), .button-link:hover { background: var(--soft); }
     input, textarea, select {
-      border-color: #deded2;
+      border-color: #d8e4ee;
       border-radius: 12px;
       color: var(--ink);
       background: #fff;
@@ -296,7 +296,7 @@
       outline-offset: 3px;
     }
     .result, .group-result, .group-summary {
-      border-color: #deded2;
+      border-color: #d8e4ee;
       border-radius: 16px;
       background: var(--soft);
     }
@@ -304,7 +304,7 @@
     .tool { border-radius: 14px; }
     .tool:hover { background: var(--soft); }
     .badge {
-      border-color: #deded2;
+      border-color: #d8e4ee;
       background: var(--soft);
       color: var(--accent);
     }
@@ -323,7 +323,7 @@
 <title>Duckアドレス生成｜Tools Personal</title>
 <meta name="description" content="自分のDuckアドレスから送るための宛先を作成。ブラウザで使える無料のWebツールです。">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#f7f5ef">
+<meta name="theme-color" content="#f3f7fb">
 <link rel="canonical" href="https://teruluce.github.io/teru-tools/duckmail/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
@@ -340,7 +340,7 @@
 <body>
   <div class="shell">
     <p class="masthead"><a href="../">Tools Personal</a>　/　ブラウザ内で動作するシンプルなツール</p>
-    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/" aria-current="page">Duckアドレス生成</a><a href="../roulette/">ルーレット・グループ分け</a><a href="../split/">割り勘計算</a><a href="../timer/">学習タイマー</a><a href="../qr/">QRコード作成</a><a href="../constellation/">ことば星座</a><a href="../rally/">ラリー</a></nav><header>
+    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/" aria-current="page">Duckアドレス生成</a><a href="../roulette/">ルーレット・グループ分け</a><a href="../split/">割り勘計算</a><a href="../timer/">学習タイマー</a><a href="../qr/">QRコード作成</a></nav><header>
       <p class="eyebrow">EMAIL ADDRESS UTILITY</p>
       <h1>Duckアドレス生成</h1>
       <p class="intro">Duckアドレスは、普段使っているメールアドレスを相手に直接知らせずにメールを受信するためによく使われます。このツールは、自分からDuckアドレスを使ってメールを送りたいときに、送信に使う宛先を簡単に作成するためのものです。</p>

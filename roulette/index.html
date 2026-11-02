@@ -12,14 +12,14 @@
 
   <style>
     :root {
-      --bg: #f7f5ef;
-      --paper: #fffefa;
-      --ink: #333b33;
-      --muted: #73796f;
-      --green: #879982;
-      --green-dark: #526b54;
-      --line: #e5e4da;
-      --soft: #e8ede3;
+      --bg: #f3f7fb;
+      --paper: #ffffff;
+      --ink: #253c50;
+      --muted: #536b7e;
+      --green: #85b7d8;
+      --green-dark: #286799;
+      --line: #d8e4ee;
+      --soft: #e8f2fa;
       --error: #a34840;
       --radius: 22px;
     }
@@ -34,8 +34,8 @@
       padding: 36px 18px;
       color: var(--ink);
       background:
-        radial-gradient(circle at 8% 8%, #e4e9dc 0, #e4e9dc 95px, transparent 96px),
-        radial-gradient(circle at 94% 80%, #eee8dc 0, #eee8dc 125px, transparent 126px),
+        radial-gradient(circle at 8% 8%, #deedf7 0, #deedf7 95px, transparent 96px),
+        radial-gradient(circle at 94% 80%, #e6eef8 0, #e6eef8 125px, transparent 126px),
         var(--bg);
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
         "Yu Gothic", Meiryo, sans-serif;
@@ -77,9 +77,9 @@
       position: relative;
       overflow: hidden;
       padding: 34px 30px 38px;
-      border: 1px solid rgba(120, 135, 112, .15);
+      border: 1px solid rgba(83, 107, 126, .15);
       border-radius: 28px;
-      background: rgba(255, 254, 250, .78);
+      background: rgba(255, 255, 255, .78);
     }
 
     .eyebrow {
@@ -116,7 +116,7 @@
       right: -25px;
       width: 180px;
       height: 180px;
-      border: 1px solid rgba(135, 153, 130, .45);
+      border: 1px solid rgba(133, 183, 216, .45);
       border-radius: 50%;
     }
 
@@ -124,7 +124,7 @@
     .decoration::after {
       position: absolute;
       content: "";
-      border: 1px solid rgba(135, 153, 130, .35);
+      border: 1px solid rgba(133, 183, 216, .35);
       border-radius: 50%;
     }
 
@@ -134,7 +134,7 @@
 
     .decoration::after {
       inset: 44px;
-      background: rgba(232, 237, 227, .5);
+      background: rgba(232, 242, 250, .5);
     }
 
     main {
@@ -143,7 +143,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--paper);
-      box-shadow: 0 12px 35px rgba(56, 62, 48, .04);
+      box-shadow: 0 12px 35px rgba(37, 60, 80, .04);
     }
 
     .section-title {
@@ -225,7 +225,7 @@
 
     input[type="text"]:focus {
       border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(135, 153, 130, .16);
+      box-shadow: 0 0 0 3px rgba(133, 183, 216, .16);
     }
 
     input[type="text"]::placeholder {
@@ -261,7 +261,7 @@
     }
 
     button:focus-visible {
-      outline: 3px solid rgba(82, 107, 84, .3);
+      outline: 3px solid rgba(40, 103, 153, .3);
       outline-offset: 3px;
     }
 
@@ -281,7 +281,7 @@
     }
 
     .secondary:hover:not(:disabled) {
-      background: #f4f3ed;
+      background: #edf4fa;
     }
 
     #spin-button {
@@ -424,8 +424,8 @@
       margin-top: 20px;
       padding: 16px 18px;
       border-radius: 15px;
-      background: rgba(232, 237, 227, .68);
-      color: #596456;
+      background: rgba(232, 242, 250, .68);
+      color: #536b7e;
       font-size: 12px;
     }
 
@@ -488,16 +488,16 @@
     }
 
     .toolnav a:hover {
-      background: #f4f3ed;
+      background: #edf4fa;
     }
 
     .toolnav a:focus-visible {
-      outline: 3px solid rgba(82, 107, 84, .3);
+      outline: 3px solid rgba(40, 103, 153, .3);
       outline-offset: 2px;
     }
 
     .toolnav a[aria-current="page"] {
-      border-color: rgba(135, 153, 130, .4);
+      border-color: rgba(133, 183, 216, .4);
       background: var(--soft);
       color: var(--green-dark);
       font-weight: 600;
@@ -528,7 +528,7 @@
       background: var(--paper);
       color: var(--green-dark);
       font-weight: 600;
-      box-shadow: 0 2px 8px rgba(56, 62, 48, .06);
+      box-shadow: 0 2px 8px rgba(37, 60, 80, .06);
     }
 
     /* グループ分け */
@@ -565,7 +565,7 @@
 
     .num:focus {
       border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(135, 153, 130, .16);
+      box-shadow: 0 0 0 3px rgba(133, 183, 216, .16);
     }
 
     .unit {
@@ -665,7 +665,7 @@
 <title>ルーレット・グループ分け｜Tools Personal</title>
 <meta name="description" content="候補からランダムに選ぶ・グループに分ける。ブラウザで使える無料のWebツールです。">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#f7f5ef">
+<meta name="theme-color" content="#f3f7fb">
 <link rel="canonical" href="https://teruluce.github.io/teru-tools/roulette/">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
@@ -689,7 +689,7 @@
 
     
 
-    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/">Duckアドレス生成</a><a href="../roulette/" aria-current="page">ルーレット・グループ分け</a><a href="../split/">割り勘計算</a><a href="../timer/">学習タイマー</a><a href="../qr/">QRコード作成</a><a href="../constellation/">ことば星座</a><a href="../rally/">ラリー</a></nav><header>
+    <nav class="toolnav" aria-label="ツールナビゲーション"><a href="../">ツールホーム</a><a href="../url-cleaner/">URLクリーナー</a><a href="../duckmail/">Duckアドレス生成</a><a href="../roulette/" aria-current="page">ルーレット・グループ分け</a><a href="../split/">割り勘計算</a><a href="../timer/">学習タイマー</a><a href="../qr/">QRコード作成</a></nav><header>
       <div class="decoration" aria-hidden="true"></div>
       <p class="eyebrow">A little utility</p>
       <h1>ルーレット・グループ分け</h1>

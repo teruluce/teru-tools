@@ -1,6 +1,6 @@
-/* 個人側の生成り・グリーンを公開サイト全体で共有 */
-:root { color-scheme:light; --bg:#f7f5ef; --paper:#fffefa; --surface:#fffefa; --ink:#333b33; --muted:#626c5e; --green:#879982; --green-dark:#526b54; --accent:#526b54; --accent-hover:#405642; --line:#deded2; --soft:#e8ede3; --radius:22px; }
-body { background:radial-gradient(circle at 8% 8%,#e4e9dc 0,#e4e9dc 95px,transparent 96px),radial-gradient(circle at 94% 80%,#eee8dc 0,#eee8dc 125px,transparent 126px),var(--bg); color:var(--ink); }
+/* てる公開版: ブルー・ホワイト・ネイビー。個人版のグリーンと区別する。 */
+:root { color-scheme:light; --bg:#f3f7fb; --paper:#ffffff; --surface:#ffffff; --ink:#253c50; --muted:#536b7e; --green:#85b7d8; --green-dark:#286799; --accent:#286799; --accent-hover:#20547e; --line:#d8e4ee; --soft:#e8f2fa; --radius:22px; }
+body { background:radial-gradient(circle at 8% 8%,#deedf7 0,#deedf7 95px,transparent 96px),radial-gradient(circle at 94% 80%,#e6eef8 0,#e6eef8 125px,transparent 126px),var(--bg); color:var(--ink); }
 .page,.shell { width:100%; max-width:680px; margin-inline:auto; }
 header { background:var(--paper); border-color:var(--line); }
 .toolnav { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
